@@ -1,0 +1,12 @@
+import React from 'react';
+
+const Course = ({ imageSrc, courseTitle }) => {
+  return (
+    <div className="flex-basis-[22%] md:flex-basis-[48%] lg:flex-basis-[22%] rounded-md mb-6 md:mb-0 lg:mb-8 relative overflow-hidden">
+      <img src={imageSrc} alt={courseTitle} className="w-40 h-auto mx-auto block" />
+      <h3 className="w-full text-xl block mt-5 font-bold">{courseTitle}</h3>
+    </div>
+  );
+}
+
+export default Course;
