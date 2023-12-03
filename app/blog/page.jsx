@@ -91,7 +91,7 @@ const posts = [
 
 const blogs = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <ImageSlider images={images} />
       <div className="feed flex flex-col px-16 pt-16">
         <div className="title m-2">

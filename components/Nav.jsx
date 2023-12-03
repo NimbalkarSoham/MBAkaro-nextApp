@@ -5,6 +5,8 @@ import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
 import { useState, useEffect } from 'react';
 
 const Nav = () => {
+  const isUserLoggedIn = true;
+
   return (
     <nav className="flex items-center justify-between px-6 pt-4 bg-transparent absolute w-full z-50">
       <a href="index.html">
@@ -30,6 +32,15 @@ const Nav = () => {
             <span className="absolute bottom-0 left-0 w-full h-0 bg-red-500 transition duration-500 ease-in-out"></span>
           </li>
         </ul>
+        {/* <div className="auth">
+          {isUserLoggedIn?(
+            <div className="button">
+              <button type='button' onClick={signOut}>Sign out</button>
+            </div>
+          ):(
+            <></>
+          )}
+        </div> */}
       </div>
       {/* <i className="fa fa-bars" onClick={() => showMenu()}></i> */}
     </nav>
