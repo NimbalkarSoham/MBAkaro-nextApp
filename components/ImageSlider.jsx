@@ -27,7 +27,7 @@ const ImageSlider = ({ images }) => {
             <div className="text-white text-center w-fit font-extrabold text-7xl p-2">
               {image.title}
             </div>
-            <div className="text-white text-center p-3 w-fit font-light text-2xl">
+            <div className="text-white text-center p-3 w-fit font-extralight text-2xl">
               {image.description}
             </div>
           </div>

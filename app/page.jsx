@@ -19,7 +19,7 @@ const Home = () => {
           />
         </div>
 
-        <Nav />
+        {/* <Nav /> */}
 
         <div className="text-box w-90 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
           <h1 className="text-6xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>

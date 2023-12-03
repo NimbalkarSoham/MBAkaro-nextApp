@@ -1,8 +1,12 @@
+"use client";
+
 import React from 'react';
+import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
+import { useState, useEffect } from 'react';
 
 const Nav = () => {
   return (
-    <nav className="flex items-center justify-between px-6 py-2">
+    <nav className="flex items-center justify-between px-6 pt-4 bg-transparent absolute w-full z-50">
       <a href="index.html">
         {/* <Image src="" alt="" className="w-12" /> */}
       </a>
