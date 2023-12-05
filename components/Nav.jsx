@@ -30,7 +30,7 @@ const Nav = () => {
             <span className="absolute bottom-0 left-0 w-full h-0 bg-red-500 transition duration-500 ease-in-out"></span>
           </li>
           <li className="relative">
-            <a href="/pages/aboutUs.html" className="text-white text-sm px-3 py-2">About</a>
+            <a href="/aboutus" className="text-white text-sm px-3 py-2">About</a>
             <span className="absolute bottom-0 left-0 w-full h-0 bg-red-500 transition duration-500 ease-in-out"></span>
           </li>
           <li className="relative">
@@ -44,7 +44,7 @@ const Nav = () => {
             <span className="absolute bottom-0 left-0 w-full h-0 bg-red-500 transition duration-500 ease-in-out"></span>
           </li>
           <li className="relative">
-            <a href="/pages/contactUs.html" className="text-white text-sm px-3 py-2">Contact Us</a>
+            <a href="/contactus" className="text-white text-sm px-3 py-2">Contact Us</a>
             <span className="absolute bottom-0 left-0 w-full h-0 bg-red-500 transition duration-500 ease-in-out"></span>
           </li>
         </ul>
