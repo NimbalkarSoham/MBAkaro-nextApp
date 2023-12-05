@@ -1,11 +1,56 @@
+'use client'
+
 import Image from 'next/image';
 import Nav from '../components/Nav';
 import Card from '@/components/Card';
 import Course from '@/components/Course';
 import Perks from '@/components/Perks';
 import Testimonial from '@/components/Testimonial';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram, faLinkedin, faPhone, faEnvelope, faMapMarker } from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { useEffect } from 'react';
+
+
+const socialMediaLinks = {
+  facebook: 'https://www.facebook.com/your-facebook-profile',
+  twitter: 'https://twitter.com/your-twitter-profile',
+  instagram: 'https://www.instagram.com/your-instagram-profile',
+  linkedin: 'https://www.linkedin.com/in/your-linkedin-profile',
+};
+
 
 const Home = () => {
+  const handleIconClick = (platform) => {
+    // Do something when an icon is clicked
+    // For demonstration purposes, opening a new window with the platform URL
+    window.open(socialMediaLinks[platform], '_blank');
+  };
+
+  useEffect(() => {
+    // Function to add event listener if the element is found
+    const addEventListenerIfElementExists = (elementId, eventName, handler) => {
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.addEventListener(eventName, handler);
+      }
+    };
+
+    // Adding event listeners after the component has mounted
+    addEventListenerIfElementExists('facebook-icon', 'click', () => handleIconClick('facebook'));
+    addEventListenerIfElementExists('twitter-icon', 'click', () => handleIconClick('twitter'));
+    addEventListenerIfElementExists('instagram-icon', 'click', () => handleIconClick('instagram'));
+    addEventListenerIfElementExists('linkedin-icon', 'click', () => handleIconClick('linkedin'));
+
+    // Cleanup: Removing event listeners when the component unmounts
+    return () => {
+      addEventListenerIfElementExists('facebook-icon', 'click', () => handleIconClick('facebook'));
+      addEventListenerIfElementExists('twitter-icon', 'click', () => handleIconClick('twitter'));
+      addEventListenerIfElementExists('instagram-icon', 'click', () => handleIconClick('instagram'));
+      addEventListenerIfElementExists('linkedin-icon', 'click', () => handleIconClick('linkedin'));
+    };
+  }, []); // Empty dependency array ensures that the effect runs only once after initial render
+
   return (
     <div>
       <section className="header min-h-screen w-full relative">
@@ -48,12 +93,14 @@ const Home = () => {
             universityName="D.Y. PATIL UNIVERSITY"
             duration="2 years"
             fees="1,40,200/-"
+            pdfName="DYPATIL"
           />
           <Card
             imageSrc="/logo.png.webp"
             universityName="MANIPAL UNIVERSITY"
             duration="2 years"
             fees="1,66,000/-"
+            pdfName="manipal"
           />
         </div>
 
@@ -70,6 +117,7 @@ const Home = () => {
             universityName="AMITY UNIVERSITY"
             duration="2 years"
             fees="1,75,000/-"
+            pdfName="Amity"
           />
           <Card
             imageSrc="/jain-logo.png"
@@ -85,6 +133,7 @@ const Home = () => {
             universityName="PARUL UNIVERSITY"
             duration="2 years"
             fees="90,000"
+            pdfName="Parul"
           />
 
           <Card
@@ -103,10 +152,10 @@ const Home = () => {
       </section>
 
 
-      <section className="courses max-w-screen-xl mx-auto text-center py-12">
+      <section id="courses" className="courses max-w-screen-xl mx-auto text-center py-24 px-12">
         <h1 className="text-4xl font-bold mb-4">Our Courses</h1>
         <br />
-        
+
         {/* <p className="text-sm font-normal leading-6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p> */}
@@ -132,7 +181,7 @@ const Home = () => {
 
       </section>
 
-      <section className="facility max-w-screen-xl mx-auto text-center pt-24">
+      <section className="facility max-w-screen-xl mx-auto text-center py-24">
         <h1 className="text-4xl font-bold mb-4">Perks of MbaKaro</h1>
         <br />
         {/* <p className="text-sm font-normal leading-6">
@@ -185,26 +234,69 @@ const Home = () => {
           />
         </div>
       </section>
-      <section className="cta bg-cover bg-center py-8 text-center rounded-md" style={{backgroundImage: 'linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/college.png)', width: '70%', margin: '50px auto'}}>
-      <h1 className="text-white text-4xl font-bold mb-8">Enroll course and know more</h1>
+      <section className="cta bg-cover bg-center py-8 text-center rounded-md" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/college.png)', width: '70%', margin: '50px auto' }}>
+        <h1 className="text-white text-4xl font-bold mb-8">Enroll course and know more</h1>
         <a href="./contactUs.html" className="inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Contact us</a>
       </section>
 
-      <section className="footer bg-gray-100 text-center py-4">
-        <h4 className="mb-6 mt-8 font-semibold">About Us</h4>
-        <p className="mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
-          quisquam cum. Quia dolore maxime error, <br />
-          eum eaque ex tenetur architecto optio repellendus culpa, aliquid dignissimos
-          possimus alias porro iure hic!
-        </p>
-        <div className="flex justify-center">
-          <i className="fab fa-facebook text-red-500 mr-4"></i>
-          <i className="fab fa-twitter text-red-500 mr-4"></i>
-          <i className="fab fa-instagram text-red-500 mr-4"></i>
-          <i className="fab fa-linkedin text-red-500"></i>
+      {/* Footer */}
+
+      <section className="footer bg-gray-100 text-center py-8">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="mb-8 md:col-span-1 lg:col-span-1 ">
+              <h4 className="text-2xl font-semibold mb-4">Contact Information</h4>
+              <div className=" mb-2">
+                <FontAwesomeIcon className="text-red-500 mr-2" />
+                <span className="text-gray-600">+1 (123) 456-7890</span>
+              </div>
+              <div className="r mb-2">
+                <FontAwesomeIcon className="text-red-500 mr-2" />
+                <span className="text-gray-600">info@example.com</span>
+              </div>
+              <div className=" items-center">
+                <FontAwesomeIcon className="text-red-500 mr-2" />
+                <span className="text-gray-600">123 Street, City, Country</span>
+              </div>
+            </div>
+
+            <div className="mb-8 md:col-span-2 lg:col-span-2  lg:ml-96">
+              <h4 className="text-2xl font-semibold mb-4 ">Follow Us</h4>
+              <div className="">
+                <a
+                  href="#"
+                  className="text-red-500 hover:text-red-700 transition duration-300"
+                >
+                  <FontAwesomeIcon icon={faFacebook} className="text-2xl mr-4" />
+                </a>
+                <a
+                  href="#"
+                  className="text-red-500 hover:text-red-700 transition duration-300"
+                >
+                  <FontAwesomeIcon icon={faTwitter} className="text-2xl mr-4" />
+                </a>
+                <a
+                  href="#"
+                  className="text-red-500 hover:text-red-700 transition duration-300"
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="text-2xl mr-4" />
+                </a>
+                <a
+                  href="#"
+                  className="text-red-500 hover:text-red-700 transition duration-300"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-gray-600 mt-8">
+            &copy; 2023 MbaKaro. All rights reserved.
+          </p>
         </div>
       </section>
+
     </div>
   );
 }
