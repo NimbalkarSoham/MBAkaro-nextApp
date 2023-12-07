@@ -1,11 +1,24 @@
 "use client";
 
 import React from 'react';
-// import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
+import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
 import { useState, useEffect } from 'react';
 
 const Nav = () => {
-  const isUserLoggedIn = true;
+  const { data: session} = useSession();
+  const [providers, setProviders] = useState(null);
+  // fetching providers
+
+  useEffect(() => {
+    const setUpProviders = async () => {
+      const response = await getProviders();
+
+      setProviders(response);
+    }
+
+    setUpProviders();
+  }, [])
+
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -16,6 +29,7 @@ const Nav = () => {
       });
     }
   };
+
   return (
     <nav className="flex items-center justify-between px-6 pt-4 bg-transparent absolute w-full z-50">
 
@@ -47,16 +61,33 @@ const Nav = () => {
             <a href="/contactus" className="text-white text-sm px-3 py-2">Contact Us</a>
             <span className="absolute bottom-0 left-0 w-full h-0 bg-red-500 transition duration-500 ease-in-out"></span>
           </li>
+          <div className="auth">
+            {session?.user?(
+              <div className="button">
+                <button 
+                  type='button' 
+                  onClick={signOut}
+                  className='text-white border-2 border-black rounded-lg px-4 py-1 text-xs'>
+                    Sign out
+                </button>
+              </div>
+            ):(
+              <>
+                {providers && 
+                  Object.values(providers).map((provider) => (
+                    <button
+                      type='button'
+                      key={provider.name}
+                      onClick={() => signIn(provider.id)}
+                      className='text-white border-2 border-black rounded-lg px-4 py-1 text-xs'>
+                        Sign In
+                    </button>
+                  ))}
+              </>
+            )}
+          </div>
         </ul>
-        {/* <div className="auth">
-          {isUserLoggedIn?(
-            <div className="button">
-              <button type='button' onClick={signOut}>Sign out</button>
-            </div>
-          ):(
-            <></>
-          )}
-        </div> */}
+        
       </div>
       {/* <i className="fa fa-bars" onClick={() => showMenu()}></i> */}
     </nav>
