@@ -1,6 +1,4 @@
 import React from "react";
-import Nav from "@/components/Nav";
-import Link from "next/link";
 import Image from "next/image";
 import Img from "@/images/people.jpeg";
 
@@ -8,17 +6,17 @@ const AboutUs = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <div>
-        <nav className="flex  items-center justify-between px-6 pt-4 bg-transparent w-full z-50">
-
+        <nav className="flex items-center justify-between px-6 pt-4 bg-transparent w-full z-50">
+          {/* Your navigation content goes here */}
         </nav>
       </div>
 
-      <div className="about-container bg-white mt-20 w-4/5  mx-auto p-8 shadow-md my-8 rounded-md flex">
-        <div className="about-image flex-1 flex items-center justify-center">
+      <div className="about-container  bg-white mt-20 mx-36  p-8 shadow-md my-8 rounded-md flex flex-col md:flex-row">
+        <div className="about-image flex-1 flex items-center justify-center mb-4 md:mb-0">
           <Image
             src={Img}
             alt="About Us Image"
-            className="w-full h-auto rounded-l-md"
+            className="w-full h-auto rounded-md md:rounded-l-md md:rounded-t-md"
             width={200}
             height={200}
           />
@@ -29,10 +27,10 @@ const AboutUs = () => {
             Mbakaro is an ED-tech company where you can find a number of top
             colleges for MBA. We provide information and resources for those
             students who are interested in pursuing an MBA degree through
-            distance learning.Lorem ipsum dolor sit amet consectetur adipisicing
+            distance learning. Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Distinctio, quisquam cum. Quia dolore maxime error, eum eaque
             ex tenetur architecto optio repellendus culpa, aliquid dignissimos
-            possimus alias porro iure hic!Lorem ipsum dolor sit amet consectetur
+            possimus alias porro iure hic! Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Distinctio, quisquam cum. Quia dolore maxime
             error, eum eaque ex tenetur architecto optio repellendus culpa,
             aliquid dignissimos possimus alias porro iure hic!
