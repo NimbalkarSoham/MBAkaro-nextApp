@@ -3,7 +3,7 @@ import React from 'react';
 
 const Testimonial = ({ imageSrc, content, userName, stars }) => {
   return (
-    <div className="flex-basis-44 bg-rose-100 border rounded-md mb-5 text-left p-6 cursor-pointer">
+    <div className="flex-basis-44 bg-gray-100  rounded-md mb-5 text-left p-6 cursor-pointer">
       <div className="flex items-center">
         <img src={imageSrc} alt={userName} className="h-10 w-10 rounded-full mr-3" />
         <div>

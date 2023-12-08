@@ -171,7 +171,7 @@ const Home = () => {
       </section>
       <br />
       <br />
-      <section className="testimonials max-w-screen-xl mx-auto pt-20 text-center py-12">
+      <section className="testimonials max-w-screen-xl mx-auto text-center ">
         <h1 className="text-4xl font-bold mb-4 py-3">What does people say about us</h1>
         {/* <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
