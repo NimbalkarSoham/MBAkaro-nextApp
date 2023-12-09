@@ -1,55 +1,16 @@
 'use client'
 
 import Image from 'next/image';
-import Nav from '../components/Nav';
+
 import Card from '@/components/Card';
 import Course from '@/components/Course';
 import Perks from '@/components/Perks';
 import Testimonial from '@/components/Testimonial';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin, faPhone, faEnvelope, faMapMarker } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { useEffect } from 'react';
-
-
-const socialMediaLinks = {
-  facebook: 'https://www.facebook.com/your-facebook-profile',
-  twitter: 'https://twitter.com/your-twitter-profile',
-  instagram: 'https://www.instagram.com/your-instagram-profile',
-  linkedin: 'https://www.linkedin.com/in/your-linkedin-profile',
-};
 
 
 const Home = () => {
-  const handleIconClick = (platform) => {
-    // Do something when an icon is clicked
-    // For demonstration purposes, opening a new window with the platform URL
-    window.open(socialMediaLinks[platform], '_blank');
-  };
 
-  useEffect(() => {
-    // Function to add event listener if the element is found
-    const addEventListenerIfElementExists = (elementId, eventName, handler) => {
-      const element = document.getElementById(elementId);
-      if (element) {
-        element.addEventListener(eventName, handler);
-      }
-    };
-
-    // Adding event listeners after the component has mounted
-    addEventListenerIfElementExists('facebook-icon', 'click', () => handleIconClick('facebook'));
-    addEventListenerIfElementExists('twitter-icon', 'click', () => handleIconClick('twitter'));
-    addEventListenerIfElementExists('instagram-icon', 'click', () => handleIconClick('instagram'));
-    addEventListenerIfElementExists('linkedin-icon', 'click', () => handleIconClick('linkedin'));
-
-    // Cleanup: Removing event listeners when the component unmounts
-    return () => {
-      addEventListenerIfElementExists('facebook-icon', 'click', () => handleIconClick('facebook'));
-      addEventListenerIfElementExists('twitter-icon', 'click', () => handleIconClick('twitter'));
-      addEventListenerIfElementExists('instagram-icon', 'click', () => handleIconClick('instagram'));
-      addEventListenerIfElementExists('linkedin-icon', 'click', () => handleIconClick('linkedin'));
-    };
-  }, []); // Empty dependency array ensures that the effect runs only once after initial render
 
   return (
     <div>
@@ -64,23 +25,23 @@ const Home = () => {
           />
         </div>
 
-        {/* <Nav /> */}
 
         <div className="text-box w-90 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="text-6xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>
-          <p className="mb-8 text-sm">Here we provide consultancy and guidance for your successful career</p>
-          <a href="./aboutUs.html" className="inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Visit us to know more</a>
+        <h1 className="text-xl md:text-4xl lg:text-5xl  sm:text-6xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>
+
+          <p className="mb-8 text-sm md:text-base lg:text-lg">Here we provide consultancy and guidance for your successful career</p>
+          <a href="./aboutUs.html" className="inline-block text-white no-underline border border-white px-6 md:px-8 py-3 text-sm md:text-base bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Visit us to know more</a>
         </div>
       </section>
 
-      <section className="University max-w-screen-xl mx-auto text-center py-12">
+      <section className="University max-w-screen-xl mx-auto text-center py-12 ">
         <h1 className="text-3xl font-semibold">University</h1>
         <p className="text-sm font-normal leading-6 py-2">
           Checkout the new courses and know more ...
         </p>
 
 
-        <div className="row mt-5 flex justify-between space-x-4">
+        <div className="row mt-5 flex flex-col justify-center md:flex-row md:justify-between md:space-x-4">
           <Card
             imageSrc="/nmims-university-logo.png"
             universityName="NMIMS UNIVERSITY"
@@ -104,7 +65,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="row mt-5 flex justify-between space-x-4">
+        <div className="row mt-5 flex flex-col justify-center md:flex-row md:justify-between md:space-x-4">
           <Card
             imageSrc="/upgrad.png"
             universityName="UPGRADE INSTITUTION"
@@ -127,7 +88,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="row mt-5 flex  justify-between space-x-4 ">
+        <div className="row mt-5 flex flex-col justify-center md:flex-row md:justify-between md:space-x-4">
           <Card
             imageSrc="/logo (1).png"
             universityName="PARUL UNIVERSITY"
@@ -152,7 +113,7 @@ const Home = () => {
       </section>
 
 
-      <section id="courses" className="courses max-w-screen-xl mx-auto text-center py-24 px-12">
+      <section id="courses" className="courses max-w-screen-xl mx-auto text-center py-24 px-4 md:px-12">
         <h1 className="text-4xl font-bold mb-4">Our Courses</h1>
         <br />
 
@@ -160,19 +121,19 @@ const Home = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p> */}
 
-        <div className="row mt-8 flex  justify-between ">
+        <div className="row mt-8 flex flex-col md:flex-row justify-between">
           <Course imageSrc="/courses/market management.png" courseTitle="Marketing Management" />
           <Course imageSrc="/courses/hr.png" courseTitle="Human Resource Management" />
           <Course imageSrc="/courses/finance.png" courseTitle="Finance Management" />
           <Course imageSrc="/courses/it.png" courseTitle="IT Management" />
         </div>
-        <div className="row mt-8 flex  justify-between">
+        <div className="row mt-8 flex flex-col md:flex-row justify-between">
           <Course imageSrc="/courses/analytics.png" courseTitle="Marketing Management" />
           <Course imageSrc="/courses/hr.png" courseTitle="Human Resource Management" />
           <Course imageSrc="/courses/hospital.png" courseTitle="Finance Management" />
           <Course imageSrc="/courses/inter business.png" courseTitle="IT Management" />
         </div>
-        <div className="row mt-8 flex  justify-between">
+        <div className="row mt-8 flex flex-col md:flex-row justify-between">
           <Course imageSrc="/courses/fintech.png" courseTitle="Marketing Management" />
           <Course imageSrc="/courses/business.png" courseTitle="Human Resource Management" />
           <Course imageSrc="/courses/logistic.png" courseTitle="Finance Management" />
@@ -181,7 +142,7 @@ const Home = () => {
 
       </section>
 
-      <section className="facility max-w-screen-xl mx-auto text-center py-24">
+      <section className="facility max-w-screen-xl mx-auto text-center py-24 px-4 md:px-12">
         <h1 className="text-4xl font-bold mb-4">Perks of MbaKaro</h1>
         <br />
         {/* <p className="text-sm font-normal leading-6">
@@ -190,7 +151,7 @@ const Home = () => {
           quas molestias earum enim corporis quod expedita vitae ducimus amet
           dolore.
         </p> */}
-        <div className="row mt-10 flex justify-between space-x-4">
+        <div className="row mt-10 flex flex-col md:flex-row justify-between space-x-4">
           <Perks
             imageSrc="/perks/consultancy.png"
             title="Complimentary Consultations"
@@ -210,8 +171,8 @@ const Home = () => {
       </section>
       <br />
       <br />
-      <section className="testimonials max-w-screen-xl mx-auto pt-20 text-center py-12">
-        <h1 className="text-3xl font-semibold mb-4">What does people say about us</h1>
+      <section className="testimonials max-w-screen-xl mx-auto text-center ">
+        <h1 className="text-4xl font-bold mb-4 py-3">What does people say about us</h1>
         {/* <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
           ipsum laudantium, illum dolores voluptas enim blanditiis assumenda odio
@@ -219,7 +180,7 @@ const Home = () => {
           eveniet excepturi?
         </p> */}
 
-        <div className="row mt-10 flex justify-between space-x-4">
+        <div className="row flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
           <Testimonial
             imageSrc="/Work.png"
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, veniam nisi fugiat rem, magnam praesentium non voluptatum unde, ex atque assumenda accusamus vitae? Consectetur harum non cupiditate vero tempore magnam."
@@ -241,61 +202,7 @@ const Home = () => {
 
       {/* Footer */}
 
-      <section className="footer bg-gray-100 text-center py-8">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div className="mb-8 md:col-span-1 lg:col-span-1 ">
-              <h4 className="text-2xl font-semibold mb-4">Contact Information</h4>
-              <div className=" mb-2">
-                <FontAwesomeIcon className="text-red-500 mr-2" />
-                <span className="text-gray-600">+1 (123) 456-7890</span>
-              </div>
-              <div className="r mb-2">
-                <FontAwesomeIcon className="text-red-500 mr-2" />
-                <span className="text-gray-600">info@example.com</span>
-              </div>
-              <div className=" items-center">
-                <FontAwesomeIcon className="text-red-500 mr-2" />
-                <span className="text-gray-600">123 Street, City, Country</span>
-              </div>
-            </div>
 
-            <div className="mb-8 md:col-span-2 lg:col-span-2  lg:ml-96">
-              <h4 className="text-2xl font-semibold mb-4 ">Follow Us</h4>
-              <div className="">
-                <a
-                  href="#"
-                  className="text-red-500 hover:text-red-700 transition duration-300"
-                >
-                  <FontAwesomeIcon icon={faFacebook} className="text-2xl mr-4" />
-                </a>
-                <a
-                  href="#"
-                  className="text-red-500 hover:text-red-700 transition duration-300"
-                >
-                  <FontAwesomeIcon icon={faTwitter} className="text-2xl mr-4" />
-                </a>
-                <a
-                  href="#"
-                  className="text-red-500 hover:text-red-700 transition duration-300"
-                >
-                  <FontAwesomeIcon icon={faInstagram} className="text-2xl mr-4" />
-                </a>
-                <a
-                  href="#"
-                  className="text-red-500 hover:text-red-700 transition duration-300"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-gray-600 mt-8">
-            &copy; 2023 MbaKaro. All rights reserved.
-          </p>
-        </div>
-      </section>
 
     </div>
   );

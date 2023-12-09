@@ -1,6 +1,7 @@
 import { Raleway } from 'next/font/google'
 import '../styles/globals.css'
 import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 import Provider from '@/components/Provider'
 
 const raleway = Raleway({ subsets: ['latin'] })
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <Nav/>
           {children}
+          <Footer/>
         </Provider>
       </body>
     </html>

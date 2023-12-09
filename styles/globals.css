@@ -16,3 +16,50 @@
   );
   opacity: 0.9; /* You can adjust the opacity as needed */
 }
+
+/* Responsive Design */
+@media screen and (max-width: 640px) {
+  /* Example: Adjust the font size for small screens */
+  .text-sm {
+    font-size: 14px;
+  }
+
+  /* Example: Adjust padding or margins for small screens */
+  .mt-4 {
+    margin-top: 2rem;
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  /* Styles for medium-sized screens */
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for large-sized screens */
+}
+
+/* Add more media queries for other screen sizes as needed */
+
+/* Example: Centering an element horizontally on small screens */
+.center-horizontal-sm {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Example: Centering an element vertically on small screens */
+.center-vertical-sm {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Example: Centering an element both horizontally and vertically on small screens */
+.center-both-sm {
+  margin: auto;
+}
+
+/* Example: Hide an element on small screens */
+.hidden-sm {
+  display: none;
+}
