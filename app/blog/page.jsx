@@ -1,5 +1,9 @@
+"use client"
+
 import BlogCard from '@/components/BlogCard';
 import ImageSlider from '@/components/ImageSlider';
+import { useSession } from 'next-auth/react';
+import Link from 'next/link';
 import React from 'react'
 
 const images = [
@@ -90,9 +94,18 @@ const posts = [
 ];
 
 const blogs = () => {
+
+  const {data: session} = useSession();
   return (
     <div>
       <ImageSlider images={images} />
+      {session?.user.email == "soham.nimbalkar08@gmail.com"?(
+        <>
+          <Link href={"/add-blog"} className='text-black no-underline border border-black px-8 py-3 text-sm bg-transparent hover:text-white hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md'>Add Blog</Link>
+        </>):(
+        <></>
+        )
+      }
       <div className="feed flex flex-col px-16 pt-16">
         <div className="title m-2">
           <h2 className='text-6xl font-bold'>Latest Blogs</h2>

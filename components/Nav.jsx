@@ -61,13 +61,17 @@ const Nav = () => {
             <a href="/contactus" className="text-white text-sm px-3 py-2">Contact Us</a>
             <span className="absolute bottom-0 left-0 w-full h-0 bg-red-500 transition duration-500 ease-in-out"></span>
           </li>
+          <li className="relative">
+            <a href="/blog" className="text-white text-sm px-3 py-2">Blogs</a>
+            <span className="absolute bottom-0 left-0 w-full h-0 bg-red-500 transition duration-500 ease-in-out"></span>
+          </li>
           <div className="auth">
             {session?.user?(
               <div className="button">
                 <button 
                   type='button' 
                   onClick={signOut}
-                  className='text-white border-2 border-black rounded-lg px-4 py-1 text-xs'>
+                  className='inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md'>
                     Sign out
                 </button>
               </div>
@@ -79,7 +83,7 @@ const Nav = () => {
                       type='button'
                       key={provider.name}
                       onClick={() => signIn(provider.id)}
-                      className='text-white border-2 border-black rounded-lg px-4 py-1 text-xs'>
+                      className='inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md'>
                         Sign In
                     </button>
                   ))}
