@@ -4,7 +4,7 @@ import BlogCard from '@/components/BlogCard';
 import ImageSlider from '@/components/ImageSlider';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const images = [
   {
@@ -41,7 +41,7 @@ const images = [
 ];
 
 
-const posts = [
+const Posts = [
   { 
     key: 0,
     image:'https://images.pexels.com/photos/4050347/pexels-photo-4050347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -96,6 +96,22 @@ const posts = [
 const blogs = () => {
 
   const {data: session} = useSession();
+
+  const [posts, setPosts] = useState(null);
+
+  useEffect(() => {
+    const fetchPosts = async() => {
+      debugger;
+      const response = await fetch('/api/blogs')
+      const data = await response.json();
+      setPosts(data);
+    } 
+  
+    if(posts == null) fetchPosts();
+    
+  }, [])
+  
+
   return (
     <div>
       <ImageSlider images={images} />
@@ -120,8 +136,10 @@ const blogs = () => {
           </ul>
         </div>
         <div className="feedList grid grid-cols-4 mt-10 gap-12">
-          {posts.map((post) => (
-            <BlogCard post={post}/>
+          {posts?.map((post) => (
+            <Link href={`/blog/${post._id}`}>
+              <BlogCard post={post}/>
+            </Link>
           ))}
         </div>
       </div>
