@@ -5,19 +5,19 @@ function Footer() {
     return (
 
         <footer
-            class="flex flex-col items-center bg-neutral-900 text-center text-white">
-            <div class="container px-6 pt-6">
+            className="flex flex-col items-center bg-neutral-900 text-center text-white">
+            <div className="container px-6 pt-6">
 
-                <div class="mb-6 flex justify-center">
+                <div className="mb-6 flex justify-center">
                     <a
                         href="#!"
                         type="button"
-                        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+                        className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
                         data-te-ripple-init
                         data-te-ripple-color="light">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="mx-auto h-full w-4"
+                            className="mx-auto h-full w-4"
                             fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -28,12 +28,12 @@ function Footer() {
                     <a
                         href="#!"
                         type="button"
-                        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+                        className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
                         data-te-ripple-init
                         data-te-ripple-color="light">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="mx-auto h-full w-4"
+                            className="mx-auto h-full w-4"
                             fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -46,12 +46,12 @@ function Footer() {
                     <a
                         href="#!"
                         type="button"
-                        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+                        className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
                         data-te-ripple-init
                         data-te-ripple-color="light">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="mx-auto h-full w-4"
+                            className="mx-auto h-full w-4"
                             fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -62,12 +62,12 @@ function Footer() {
                     <a
                         href="#!"
                         type="button"
-                        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+                        className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
                         data-te-ripple-init
                         data-te-ripple-color="light">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="mx-auto h-full w-4"
+                            className="mx-auto h-full w-4"
                             fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -81,7 +81,7 @@ function Footer() {
 
                 
 
-                {/* <div class="mb-6">
+                {/* <div className="mb-6">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
                         distinctio earum repellat quaerat voluptatibus placeat nam,
@@ -91,75 +91,75 @@ function Footer() {
                 </div> */}
 
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4">
-                    <div class="mb-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4">
+                    <div className="mb-6">
                         
-                        <h5 class="mb-2.5 font-bold uppercase">MBA Karo</h5>
+                        <h5 className="mb-2.5 font-bold uppercase">MBA Karo</h5>
                         
-                        <ul class="mb-0 list-none">
+                        <ul className="mb-0 list-none">
                             <li>
-                                <a href="#!" class="text-white"> Home</a>
+                                <a href="#!" className="text-white"> Home</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">About</a>
+                                <a href="#!" className="text-white">About</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">Blogs</a>
+                                <a href="#!" className="text-white">Blogs</a>
                             </li>
                             {/* <li>
-                                <a href="#!" class="text-white">Link 4</a>
+                                <a href="#!" className="text-white">Link 4</a>
                             </li> */}
                         </ul>
                     </div>
 
-                    <div class="mb-6">
+                    <div className="mb-6">
                     
-                        <h5 class="mb-2.5 font-bold uppercase">Hepl Center</h5>
+                        <h5 className="mb-2.5 font-bold uppercase">Hepl Center</h5>
                         
 
-                        <ul class="mb-0 list-none">
+                        <ul className="mb-0 list-none">
                             <li>
                                 <Link href='/contactus'>Contact us</Link>
                             </li>
                             <li>
-                                <a href="#!" class="text-white"> +91 7776010654</a>
+                                <a href="#!" className="text-white"> +91 7776010654</a>
                             </li>
                            
                         </ul>
                     </div>
 
-                    <div class="mb-6">
-                        <h5 class="mb-2.5 font-bold uppercase">Legal</h5>
+                    <div className="mb-6">
+                        <h5 className="mb-2.5 font-bold uppercase">Legal</h5>
 
-                        <ul class="mb-0 list-none">
+                        <ul className="mb-0 list-none">
                             <li>
-                                <a href="#!" class="text-white">Privacy Policy</a>
+                                <a href="#!" className="text-white">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">Licensing</a>
+                                <a href="#!" className="text-white">Licensing</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">Terms & Conditions</a>
+                                <a href="#!" className="text-white">Terms & Conditions</a>
                             </li>
                            
                         </ul>
                     </div>
 
-                    <div class="mb-6">
-                        <h5 class="mb-2.5 font-bold uppercase">Download</h5>
+                    <div className="mb-6">
+                        <h5 className="mb-2.5 font-bold uppercase">Download</h5>
 
-                        <ul class="mb-0 list-none">
+                        <ul className="mb-0 list-none">
                             <li>
-                                <a href="#!" class="text-white">Brochure</a>
+                                <a href="#!" className="text-white">Brochure</a>
                             </li>
                             {/* <li>
-                                <a href="#!" class="text-white">Link 2</a>
+                                <a href="#!" className="text-white">Link 2</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">Link 3</a>
+                                <a href="#!" className="text-white">Link 3</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">Link 4</a>
+                                <a href="#!" className="text-white">Link 4</a>
                             </li> */}
                         </ul>
                     </div>
@@ -168,10 +168,10 @@ function Footer() {
 
 
             <div
-                class="w-full p-4 text-center"
+                className="w-full p-4 text-center"
                 style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                 © 2023 Copyright:
-                <a class="text-white" href="https://tw-elements.com/"> MbaKaro</a>
+                <a className="text-white" href="https://tw-elements.com/"> MbaKaro</a>
             </div>
           
         </footer>
