@@ -103,18 +103,18 @@ const blogs = () => {
 
   useEffect(() => {
     const fetchPosts = async() => {
-      debugger;
+      // debugger;
       const response = await fetch('/api/blogs')
       const data = await response.json();
       setPosts(data);
     } 
   
     if(posts == null){
-      debugger;
+      // debugger;
       fetchPosts();
 
     } else{
-      debugger;
+      // debugger;
       setImages(
         posts.map((post) => ({
           src: post.coverImg || '',
@@ -131,7 +131,7 @@ const blogs = () => {
   
 
   return (
-    <div>
+    <div className='mx-auto'>
       <ImageSlider images={images} />
       <div className="add-btn m-10">
         {session?.user.email == "soham.nimbalkar08@gmail.com"?(
@@ -142,12 +142,12 @@ const blogs = () => {
           )
         }
       </div>
-      <div className="feed flex flex-col px-16 pt-16">
-        <div className="title m-2">
+      <div className="feed flex flex-col px-4 sm:px-4 md:px-14 pt-16">
+        <div className="title">
           <h2 className='text-6xl font-bold'>Latest Blogs</h2>
         </div>
-        <div className="filters bg-slate-200 w-fit px-9 py-2 rounded-lg">
-          <ul className='flex flex-row gap-12'>
+        <div className="filters bg-slate-200 w-fit px-9 py-2 my-3 rounded-lg">
+          <ul className='flex flex-row gap-3.5 w-4/5 max-w-[500px] text-base'>
             <li>All</li>
             <li>Cat1</li>
             <li>Cat2</li>

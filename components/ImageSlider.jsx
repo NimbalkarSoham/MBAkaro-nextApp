@@ -23,11 +23,11 @@ const ImageSlider = ({ images }) => {
         >
           <img src={image.src} alt={image.alt} className="w-full h-full object-cover " />
           <div className="absolute inset-0 gradient-overlay"></div>
-          <div className="absolute inset-0 flex flex-col w-fit mx-10 mb-20 justify-end">
-            <div className="text-white text-left w-fit font-extrabold text-6xl p-2">
+          <div className="absolute inset-0 flex flex-col w-fit mx-5 md:mx-10 mb-20 justify-end">
+            <div className="text-white text-left w-fit font-extrabold text-4xl md:text-6xl p-2">
               {image.title}
             </div>
-            <div className="text-white text-center p-3 w-fit font-extralight text-2xl">
+            <div className="text-white text-left p-3 w-fit font-extralight text-lg md:text-2xl">
               {image.description}
             </div>
           </div>

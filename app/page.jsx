@@ -30,7 +30,7 @@ const Home = () => {
         <h1 className="text-xl md:text-4xl lg:text-5xl  sm:text-6xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>
 
           <p className="mb-8 text-sm md:text-base lg:text-lg">Here we provide consultancy and guidance for your successful career</p>
-          <a href="./aboutUs.html" className="inline-block text-white no-underline border border-white px-6 md:px-8 py-3 text-sm md:text-base bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Visit us to know more</a>
+          <a href="./aboutus" className="inline-block text-white no-underline border border-white px-6 md:px-8 py-3 text-sm md:text-base bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Visit us to know more</a>
         </div>
       </section>
 
