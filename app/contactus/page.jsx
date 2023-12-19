@@ -1,7 +1,33 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
+import { useState } from 'react';
+import sendMail from '@/utils/emailService';
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await sendMail(formData);
+      // Reset form fields on successful submission
+      setFormData({ name: '', email: '', message: '' });
+      // Display success message or perform any other action
+      console.log('Email sent successfully');
+    } catch (error) {
+      // Handle error, display error message, etc.
+      console.error('Error sending email:', error);
+    }
+  };
   return (
     <div className="bg-gray-100 min-h-screen">
       <div>
@@ -20,23 +46,52 @@ const ContactUs = () => {
         <div className="right-col flex-1 p-4 md:p-8 bg-white shadow-md">
           <h1 className="text-2xl font-semibold mb-4">Contact us</h1>
 
-          <form id="contact-form" method="post">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full name</label>
-            <input type="text" id="name" name="name" placeholder="Your Full Name" required
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-            />
-            <label htmlFor="email" className="block mt-4 text-sm font-medium text-gray-700">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Your Email Address" required
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-            />
-            <label htmlFor="message" className="block mt-4 text-sm font-medium text-gray-700">Message</label>
-            <textarea rows="6" placeholder="Your Message" id="message" name="message" required
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-            ></textarea>
+          <form id="contact-form" method="post" onSubmit={handleSubmit}>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+        Full name
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your Full Name"
+        required
+        value={formData.name}
+        onChange={handleChange} // Here's where handleChange is used
+        className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+      />
+
+      <label htmlFor="email" className="block mt-4 text-sm font-medium text-gray-700">
+        Email Address
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your Email Address"
+        required
+        value={formData.email}
+        onChange={handleChange} // Here's where handleChange is used
+        className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+      />
+
+      <label htmlFor="message" className="block mt-4 text-sm font-medium text-gray-700">
+        Message
+      </label>
+      <textarea
+        rows="6"
+        placeholder="Your Message"
+        id="message"
+        name="message"
+        required
+        value={formData.message}
+        onChange={handleChange} // Here's where handleChange is used
+        className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+      />
+
             <div id="clicked-address"></div>
-            <button type="submit" id="submit" name="submit"
-              className="mt-4 bg-red-500 text-white px-4 py-2 rounded-full focus:outline-none hover:opacity-80"
-            >Send</button>
+            <button type="submit" id="submit" name="submit" className="mt-4 bg-red-500 text-white px-4 py-2 rounded-full focus:outline-none hover:opacity-80">
+        Send</button>
           </form>
 
           <div id="error" className="text-sm text-red-500 mt-2"></div>
