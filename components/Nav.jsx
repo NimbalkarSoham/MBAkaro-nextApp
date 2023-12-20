@@ -52,7 +52,7 @@ const Nav = () => {
         </div>
 
         <div
-          className={`items-center justify-between w-full md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
+          className={`items-center justify-start w-full md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
         >
           <ul className="flex flex-col font-medium p-4 border border-neutral-100 rounded-lg bg-neutral-50 space-y-2">
             <li>
@@ -91,7 +91,7 @@ const Nav = () => {
         </div>
 
         <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-neutral-100 rounded-lg bg-neutral-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-neutral-800 md:dark:bg-neutral-900 dark:border-neutral-700">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-neutral-100 rounded-lg bg-neutral-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-neutral-800 md:dark:bg-neutral-900 dark:border-neutral-700 ">
             <li>
               <Link
                 href="/"
@@ -127,7 +127,7 @@ const Nav = () => {
           </ul>
         </div>
 
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
           <div className="auth ">
             {session?.user ? (
               <div className="button">

@@ -7,9 +7,49 @@ import Course from '@/components/Course';
 import Perks from '@/components/Perks';
 import Testimonial from '@/components/Testimonial';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { useEffect } from 'react';
 
 
 const Home = () => {
+
+  useEffect(() => {
+    // Dynamically create script elements for chatbot
+    const injectScript = document.createElement('script');
+    injectScript.src = 'https://cdn.botpress.cloud/webchat/v1/inject.js';
+    document.body.appendChild(injectScript);
+
+    const configScript = document.createElement('script');
+    injectScript.onload = () => {
+      configScript.innerHTML = `
+    
+      window.botpressWebChat.init({
+        "composerPlaceholder": "Chat with Customer-bot",
+        "botConversationDescription": "helping ...",
+        "botId": "0f3598c7-2e14-4959-8e54-303385d1558a",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "0f3598c7-2e14-4959-8e54-303385d1558a",
+        "webhookId": "158e12e2-d796-4636-b200-99fa5952aebf",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "Customer-bot",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/a8aca2fa-5d95-4a28-ad4c-d9b6feda5eb5/v32284/style.css",
+        "frontendVersion": "v1",
+        "useSessionStorage": true,
+        "theme": "prism",
+        "themeColor": "#2563eb"
+      });
+    
+    `;
+    document.body.appendChild(configScript);
+    };
+    
+    document.body.appendChild(injectScript);
+    // Cleanup function to remove script elements when the component unmounts
+    return () => {
+      document.body.removeChild(injectScript);
+    };
+  }, []);
 
 
   return (
@@ -27,7 +67,7 @@ const Home = () => {
 
 
         <div className="text-box w-90 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 className="text-xl md:text-4xl lg:text-5xl  sm:text-6xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>
+        <h1 className="text-xl md:text-2xl lg:text-5xl  sm:text-4xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>
 
           <p className="mb-8 text-sm md:text-base lg:text-lg">Here we provide consultancy and guidance for your successful career</p>
           <a href="./aboutus" className="inline-block text-white no-underline border border-white px-6 md:px-8 py-3 text-sm md:text-base bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Visit us to know more</a>
@@ -197,7 +237,7 @@ const Home = () => {
       </section>
       <section className="cta bg-cover bg-center py-8 text-center rounded-md" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/college.png)', width: '70%', margin: '50px auto' }}>
         <h1 className="text-white text-4xl font-bold mb-8">Enroll course and know more</h1>
-        <a href="./contactUs.html" className="inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Contact us</a>
+        <a href="./contactus" className="inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Contact us</a>
       </section>
 
       {/* Footer */}
