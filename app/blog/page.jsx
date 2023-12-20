@@ -93,6 +93,14 @@ import React, { useEffect, useState } from 'react'
 //   },
 // ];
 
+
+const admins = [
+  "soham.nimbalkar08@gmail.com",
+  "2021.abhishek.jadhav@ves.ac.in",
+  "mpitmnsk@gmail.com",
+  "jadhavabhishek24k2@gmail.com",
+  "info@mbakaro.com"
+]
 const blogs = () => {
 
   const {data: session} = useSession();
@@ -134,7 +142,7 @@ const blogs = () => {
     <div className='mx-auto'>
       <ImageSlider images={images} />
       <div className="add-btn m-10">
-        {session?.user.email == "soham.nimbalkar08@gmail.com"?(
+        {admins.includes(session?.user.email)?(
           <>
             <Link href={"/add-blog"} className='text-white bg-neutral-900 no-underline border border-black px-8 py-3 text-sm hover:text-white hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md'>Add Blog</Link>
           </>):(
