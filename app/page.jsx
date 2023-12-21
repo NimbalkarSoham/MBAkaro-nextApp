@@ -7,9 +7,49 @@ import Course from '@/components/Course';
 import Perks from '@/components/Perks';
 import Testimonial from '@/components/Testimonial';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { useEffect } from 'react';
 
 
 const Home = () => {
+
+  // useEffect(() => {
+  //   // Dynamically create script elements for chatbot
+  //   const injectScript = document.createElement('script');
+  //   injectScript.src = 'https://cdn.botpress.cloud/webchat/v1/inject.js';
+  //   document.body.appendChild(injectScript);
+
+  //   const configScript = document.createElement('script');
+  //   injectScript.onload = () => {
+  //     configScript.innerHTML = `
+    
+  //     window.botpressWebChat.init({
+  //       "composerPlaceholder": "Chat with Customer-bot",
+  //       "botConversationDescription": "helping ...",
+  //       "botId": "0f3598c7-2e14-4959-8e54-303385d1558a",
+  //       "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+  //       "messagingUrl": "https://messaging.botpress.cloud",
+  //       "clientId": "0f3598c7-2e14-4959-8e54-303385d1558a",
+  //       "webhookId": "158e12e2-d796-4636-b200-99fa5952aebf",
+  //       "lazySocket": true,
+  //       "themeName": "prism",
+  //       "botName": "Customer-bot",
+  //       "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/a8aca2fa-5d95-4a28-ad4c-d9b6feda5eb5/v32284/style.css",
+  //       "frontendVersion": "v1",
+  //       "useSessionStorage": true,
+  //       "theme": "prism",
+  //       "themeColor": "#2563eb"
+  //     });
+    
+  //   `;
+  //     document.body.appendChild(configScript);
+  //   };
+
+  //   document.body.appendChild(injectScript);
+  //   // Cleanup function to remove script elements when the component unmounts
+  //   return () => {
+  //     document.body.removeChild(injectScript);
+  //   };
+  // }, []);
 
 
   return (
@@ -27,7 +67,7 @@ const Home = () => {
 
 
         <div className="text-box w-90 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 className="text-xl md:text-4xl lg:text-5xl  sm:text-6xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>
+          <h1 className="text-xl md:text-2xl lg:text-5xl  sm:text-4xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>
 
           <p className="mb-8 text-sm md:text-base lg:text-lg">Here we provide consultancy and guidance for your successful career</p>
           <a href="./aboutus" className="inline-block text-white no-underline border border-white px-6 md:px-8 py-3 text-sm md:text-base bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Visit us to know more</a>
@@ -181,23 +221,28 @@ const Home = () => {
         </p> */}
 
         <div className="row flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
-          <Testimonial
-            imageSrc="/Work.png"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, veniam nisi fugiat rem, magnam praesentium non voluptatum unde, ex atque assumenda accusamus vitae? Consectetur harum non cupiditate vero tempore magnam."
-            userName="User Name"
-            stars={4}
-          />
-          <Testimonial
-            imageSrc="/Work.png"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, veniam nisi fugiat rem, magnam praesentium non voluptatum unde, ex atque assumenda accusamus vitae? Consectetur harum non cupiditate vero tempore magnam."
-            userName="User Name"
-            stars={3.5}
-          />
+          <div className="min-h-[300px]">
+            <Testimonial
+              imageSrc="/testimonials/User1.jpg"
+              content="The MBAKaro website played a crucial role in my NMIMS journey. Its resources and networking helped shape my career. Now at CEAT Tyres, I apply the insights gained daily. Thanks to the MBAKaro for being my career companion!"
+              userName="Kunal Jeughale"
+              stars={4}
+            />
+          </div>
+          <div className="min-h-[300px]">
+            <Testimonial
+              imageSrc="/testimonials/User2.jpg"
+              content="The MBAKaro was a game-changer during my time at DPU's Marketing Management program. It offered crucial resources and networking that shaped my journey. Now, as a marketing professional, I continue to apply its insights daily. Thanks to the MBAKaro for being a key part of my success!"
+              userName="Uddhav Pai"
+              stars={3.5}
+            />
+          </div>
         </div>
+
       </section>
       <section className="cta bg-cover bg-center py-8 text-center rounded-md" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/college.png)', width: '70%', margin: '50px auto' }}>
         <h1 className="text-white text-4xl font-bold mb-8">Enroll course and know more</h1>
-        <a href="./contactUs.html" className="inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Contact us</a>
+        <a href="./contactus" className="inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Contact us</a>
       </section>
 
       {/* Footer */}

@@ -1,20 +1,21 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Card = ({ imageSrc, universityName, duration, fees, pdfName }) => {
-  const handleDownload = () => {
-    // Assuming your PDFs are stored in the public/pdf/ directory
-    const pdfUrl = `/pdf/${pdfName}.pdf`;
+  // const handleDownload = () => {
+  //   // Assuming your PDFs are stored in the public/pdf/ directory
+  //   const pdfUrl = `/pdf/${pdfName}.pdf`;
 
-    // Create a link element
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = `${universityName}_Brochure.pdf`;
+  //   // Create a link element
+  //   const link = document.createElement('a');
+  //   link.href = pdfUrl;
+  //   link.download = `${universityName}_Brochure.pdf`;
     
-    // Trigger the click event to start the download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  //   // Trigger the click event to start the download
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   return (
     <div className="flex-basis-[45%] bg-gray-100 rounded-md mb-8 p-4 box-border transition duration-300 ease-in-out hover:shadow-md hover:bg-gray-300 transform hover:scale-105">
@@ -28,10 +29,11 @@ const Card = ({ imageSrc, universityName, duration, fees, pdfName }) => {
       </p>
       <br />
       <button
-        onClick={handleDownload}
-        className="inline-block text-black no-underline border border-gray-900 px-8 py-3 text-sm bg-transparent hover:border-gray-500 hover:bg-gray-500 transition duration-500 ease-in-out rounded-md"
+        // onClick={handleDownload}
+        className="inline-block text-white no-underline border border-gray-100 bg-gray-500 px-8 py-3 text-sm bg-transparent hover:border-gray-500 hover:bg-gray-500 transition duration-500 ease-in-out rounded-md"
       >
-        Download
+        <Link href='/contactus'> Contact</Link>
+        
       </button>
     </div>
   );
