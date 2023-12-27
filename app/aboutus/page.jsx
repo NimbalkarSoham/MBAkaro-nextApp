@@ -75,73 +75,73 @@ MBAkaro is on a mission of providing a dynamic and supportive learning environme
         <h1 className="text-4xl font-bold mb-4">Our hiring Partners</h1>
 
         <div className="grid pt-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T113805.049.png"
               courseTitle="Marketing Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T114137.249.png"
               courseTitle="Human Resource Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T114401.697.png"
               courseTitle="Finance Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T114458.193.png"
               courseTitle="IT Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T114934.333.png"
               courseTitle="Marketing Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T115851.354.png"
               courseTitle="Human Resource Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T120010.258.png"
               courseTitle="Finance Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T120132.142.png"
               courseTitle="IT Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T120315.411.png"
               courseTitle="Marketing Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T120518.784.png"
               courseTitle="Human Resource Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T120618.202.png"
               courseTitle="Finance Management"
             />
           </div>
-          <div className="border border-gray-400 p-4">
+          <div className=" p-4">
             <Course
               imageSrc="https://mbakaro.com/wp-content/uploads/2023/06/Untitled-design-2023-06-16T120658.450.png"
               courseTitle="IT Management"
@@ -150,85 +150,7 @@ MBAkaro is on a mission of providing a dynamic and supportive learning environme
         </div>
       </section>
 
-      <section className="facility max-w-screen-xl mx-auto text-center  px-4 md:px-12">
-        <h1 className="text-4xl font-bold mb-4">
-          Authorized enrollement partners
-        </h1>
-        <br />
-        {/* <p className="text-sm font-normal leading-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ullam,
-          nostrum iste aliquid provident aliquam autem repellat pariatur incidunt
-          quas molestias earum enim corporis quod expedita vitae ducimus amet
-          dolore.
-        </p> */}
-        <div className="row mt-10 flex flex-col md:flex-row justify-between space-x-4">
-          <Perks
-            imageSrc="/nmims-university-logo.png"
-            title="Complimentary Consultations"
-            description="At MbaKaro, we are committed to supporting individuals on their journey to mental well-being. We offer a range of high-quality counseling services, including complimentary counseling sessions. Our team of experienced professionals is dedicated to providing accessible and compassionate care to help you navigate life's challenges. Take the first step towards a healthier, happier you with our no-cost counseling services."
-          />
-          <Perks
-            imageSrc="/dpu.png"
-            title="Skilled Mentors"
-            description="Meet our accomplished faculty—an assembly of seasoned educators dedicated to nurturing academic excellence. Our veteran instructors bring a wealth of experience, expertise, and passion to the learning environment. With a commitment to fostering growth and knowledge, our skilled mentors guide students on a transformative educational journey. Experience the difference of learning from a team of accomplished educators who are committed to your success."
-          />
-          <Perks
-            imageSrc="/logo.png.webp"
-            title="Specialized Assistance"
-            description="Experience the difference with our personalized support services. At MbaKaro, we understand that individual needs vary, and our dedicated team is here to provide tailored assistance to help you thrive. Whether you're a student, client, or customer, our commitment to personalized support ensures that your unique requirements are met with care and attention. Discover a customized approach to [your service or product] that puts your satisfaction and success at the forefront of everything we do."
-          />
-        </div>
-      </section>
-      <section className="facility max-w-screen-xl mx-auto text-center px-4 md:px-12">
-        {/* <p className="text-sm font-normal leading-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ullam,
-          nostrum iste aliquid provident aliquam autem repellat pariatur incidunt
-          quas molestias earum enim corporis quod expedita vitae ducimus amet
-          dolore.
-        </p> */}
-        <div className="row mt-10 flex flex-col md:flex-row justify-between space-x-4">
-          <Perks
-            imageSrc="/jain-logo.png"
-            title="Complimentary Consultations"
-            description="At MbaKaro, we are committed to supporting individuals on their journey to mental well-being. We offer a range of high-quality counseling services, including complimentary counseling sessions. Our team of experienced professionals is dedicated to providing accessible and compassionate care to help you navigate life's challenges. Take the first step towards a healthier, happier you with our no-cost counseling services."
-          />
-          <Perks
-            imageSrc="/upgrad.png"
-            title="Skilled Mentors"
-            description="Meet our accomplished faculty—an assembly of seasoned educators dedicated to nurturing academic excellence. Our veteran instructors bring a wealth of experience, expertise, and passion to the learning environment. With a commitment to fostering growth and knowledge, our skilled mentors guide students on a transformative educational journey. Experience the difference of learning from a team of accomplished educators who are committed to your success."
-          />
-          <Perks
-            imageSrc="/logo (3).png"
-            title="Specialized Assistance"
-            description="Experience the difference with our personalized support services. At MbaKaro, we understand that individual needs vary, and our dedicated team is here to provide tailored assistance to help you thrive. Whether you're a student, client, or customer, our commitment to personalized support ensures that your unique requirements are met with care and attention. Discover a customized approach to [your service or product] that puts your satisfaction and success at the forefront of everything we do."
-          />
-        </div>
-      </section>
-      <section className="facility max-w-screen-xl mx-auto text-center px-4 md:px-12">
-        {/* <p className="text-sm font-normal leading-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ullam,
-          nostrum iste aliquid provident aliquam autem repellat pariatur incidunt
-          quas molestias earum enim corporis quod expedita vitae ducimus amet
-          dolore.
-        </p> */}
-        <div className="row mt-10 flex flex-col md:flex-row justify-between space-x-4">
-          <Perks
-            imageSrc="/logo (1).png"
-            title="Complimentary Consultations"
-            description="At MbaKaro, we are committed to supporting individuals on their journey to mental well-being. We offer a range of high-quality counseling services, including complimentary counseling sessions. Our team of experienced professionals is dedicated to providing accessible and compassionate care to help you navigate life's challenges. Take the first step towards a healthier, happier you with our no-cost counseling services."
-          />
-          <Perks
-            imageSrc="/gyan.png"
-            title="Skilled Mentors"
-            description="Meet our accomplished faculty—an assembly of seasoned educators dedicated to nurturing academic excellence. Our veteran instructors bring a wealth of experience, expertise, and passion to the learning environment. With a commitment to fostering growth and knowledge, our skilled mentors guide students on a transformative educational journey. Experience the difference of learning from a team of accomplished educators who are committed to your success."
-          />
-          <Perks
-            imageSrc="/logo (2).png"
-            title="Specialized Assistance"
-            description="Experience the difference with our personalized support services. At MbaKaro, we understand that individual needs vary, and our dedicated team is here to provide tailored assistance to help you thrive. Whether you're a student, client, or customer, our commitment to personalized support ensures that your unique requirements are met with care and attention. Discover a customized approach to [your service or product] that puts your satisfaction and success at the forefront of everything we do."
-          />
-        </div>
-      </section>
+      
       <br />
       <br />
       <section className="testimonials max-w-screen-xl mx-auto text-center ">
