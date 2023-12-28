@@ -154,19 +154,7 @@ MBAkaro is on a mission of providing a dynamic and supportive learning environme
       
       <br />
       <br />
-      <section className="testimonials max-w-screen-xl mx-auto text-center ">
-        <h1 className="text-4xl font-bold mb-4 py-3">
-          What does people say about us
-        </h1>
-        {/* <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          ipsum laudantium, illum dolores voluptas enim blanditiis assumenda odio
-          et nesciunt eius labore. Assumenda at illo, accusantium laborum sit
-          eveniet excepturi?
-        </p> */}
-
-        
-      </section>
+      
       <section
         className="cta bg-cover bg-center py-8 text-center rounded-md"
         style={{
