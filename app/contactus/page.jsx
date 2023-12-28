@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
 import sendMail from '@/utils/emailService';
+import Image from 'next/image';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -37,11 +38,18 @@ const ContactUs = () => {
       </div>
 
       <div className="contact-container mt-11 mx-4 md:mx-20 lg:mx-40 flex flex-col md:flex-row shadow-lg">
-        <iframe
+        {/* <iframe
           className="left-col w-full md:w-2/5 h-60 md:h-auto"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15195.890370129258!2d74.3955550966623!3d17.79298516206121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc3b80000ffabbb%3A0x8805ef9216d347dd!2sKulakjai%2C%20Maharashtra%20415503!5e0!3m2!1sen!2sin!4v1701174459382!5m2!1sen!2sin"
           width="600" height="550" style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></iframe> */}
+         <Image
+              src="/contactus.jpg"
+              alt="About Us Image"
+              className="left-col w-full md:w-2/5 h-60 md:h-auto"
+              width={600}
+              height={500}
+            />
 
         <div className="right-col flex-1 p-4 md:p-8 bg-white shadow-md">
           <h1 className="text-2xl font-semibold mb-4">Contact us</h1>
