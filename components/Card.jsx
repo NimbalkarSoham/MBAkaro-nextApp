@@ -30,7 +30,7 @@ const Card = ({ imageSrc, universityName, duration, fees, pdfName }) => {
       <br />
       <button
         // onClick={handleDownload}
-        className="inline-block text-white no-underline border border-gray-100 bg-gray-500 px-8 py-3 text-sm bg-transparent hover:border-gray-500 hover:bg-gray-500 transition duration-500 ease-in-out rounded-md"
+        className="inline-block text-white no-underline border border-gray-100 bg-gray-600 px-8 py-3 text-sm bg-transparent hover:bg-gray-500 transition duration-500 ease-in-out rounded-md"
       >
         <Link href='/contactus'> Contact</Link>
         
