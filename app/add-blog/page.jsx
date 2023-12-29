@@ -26,13 +26,13 @@ const addBlog = () => {
     }
     const handleAddHead = () => {
         const textarea = document.getElementById('input-text').value;
-        const newText = <h1 className='font-extrabold text-4xl mt-5'>{textarea}</h1>;
+        const newText = <h1 className='font-extrabold text-4xl mt-5 text-center'>{textarea}</h1>;
         setContent([content,newText]);
         document.getElementById('input-text').value = "";
     }
     const handleAddSubhead = () => {
         const textarea = document.getElementById('input-text').value;
-        const newText = <h1 className='font-bold text-2xl mt-3'>{textarea}</h1>;
+        const newText = <h1 className='font-bold text-2xl mt-3 text-center'>{textarea}</h1>;
         setContent([content,newText]);
         document.getElementById('input-text').value = "";
     }

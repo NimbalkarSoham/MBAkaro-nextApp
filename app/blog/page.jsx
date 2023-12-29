@@ -101,9 +101,15 @@ const admins = [
   "jadhavabhishek24k2@gmail.com",
   "info@mbakaro.com"
 ]
+
+const categories = [
+  "motivation",
+  "career development"
+]
 const blogs = () => {
 
   const {data: session} = useSession();
+  const [allPost, setAllPost] = useState(null)
 
   const [posts, setPosts] = useState(null);
 
@@ -115,6 +121,7 @@ const blogs = () => {
       const response = await fetch('/api/blogs')
       const data = await response.json();
       setPosts(data);
+      setAllPost(data);
     } 
   
     if(posts == null){
@@ -136,7 +143,14 @@ const blogs = () => {
   }, [posts])
 
   
-  
+  const handleTagClick = (category) => {
+    const regex = new RegExp(category, "i"); // 'i' flag for case-insensitive search
+    const filteredResult = allPost?.filter(
+      (item) =>
+        regex.test(item.category) 
+    );
+    setPosts(filteredResult)
+  }
 
   return (
     <div className='mx-auto'>
@@ -155,12 +169,10 @@ const blogs = () => {
           <h2 className='text-6xl font-bold'>Latest Blogs</h2>
         </div>
         <div className="filters bg-slate-200 w-fit px-9 py-2 my-3 rounded-lg">
-          <ul className='flex flex-row gap-3.5 w-4/5 max-w-[500px] text-base'>
-            <li>All</li>
-            <li>Cat1</li>
-            <li>Cat2</li>
-            <li>Cat3</li>
-            <li>Cat4</li>
+          <ul className='flex flex-row gap-3.5 text-base'>
+            {categories.map((category) => (
+              <p onClick={() => handleTagClick(category)} className='cursor-pointer'>{category}</p>
+            ))}
           </ul>
         </div>
         <div className="feedList my-8 flex flex-wrap gap-8">

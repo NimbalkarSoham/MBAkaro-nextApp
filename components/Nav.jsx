@@ -10,6 +10,7 @@ const Nav = () => {
 
   useEffect(() => {
     const setUpProviders = async () => {
+      debugger;
       const response = await getProviders();
       setProviders(response);
     };
