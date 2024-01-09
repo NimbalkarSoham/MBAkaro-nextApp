@@ -1,17 +1,15 @@
-'use client'
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import Card from '@/components/Card';
-import Course from '@/components/Course';
-import Perks from '@/components/Perks';
-import Testimonial from '@/components/Testimonial';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { useEffect } from 'react';
-
+import Card from "@/components/Card";
+import Course from "@/components/Course";
+import Perks from "@/components/Perks";
+import Testimonial from "@/components/Testimonial";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { useEffect } from "react";
 
 const Home = () => {
-
   // useEffect(() => {
   //   // Dynamically create script elements for chatbot
   //   const injectScript = document.createElement('script');
@@ -21,7 +19,7 @@ const Home = () => {
   //   const configScript = document.createElement('script');
   //   injectScript.onload = () => {
   //     configScript.innerHTML = `
-    
+
   //     window.botpressWebChat.init({
   //       "composerPlaceholder": "Chat with Customer-bot",
   //       "botConversationDescription": "helping ...",
@@ -39,7 +37,7 @@ const Home = () => {
   //       "theme": "prism",
   //       "themeColor": "#2563eb"
   //     });
-    
+
   //   `;
   //     document.body.appendChild(configScript);
   //   };
@@ -50,7 +48,6 @@ const Home = () => {
   //     document.body.removeChild(injectScript);
   //   };
   // }, []);
-
 
   return (
     <div>
@@ -65,12 +62,20 @@ const Home = () => {
           />
         </div>
 
-
         <div className="text-box w-90 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="text-xl md:text-2xl lg:text-5xl  sm:text-4xl font-bold whitespace-nowrap">Unlock your potential with MbaKaro</h1>
+          <h1 className="text-xl md:text-2xl lg:text-5xl  sm:text-4xl font-bold whitespace-nowrap">
+            Unlock your potential with MbaKaro
+          </h1>
 
-          <p className="mb-8 text-sm md:text-base lg:text-lg">Here we provide consultancy and guidance for your successful career</p>
-          <a href="./aboutus" className="inline-block text-white no-underline border border-white px-6 md:px-8 py-3 text-sm md:text-base bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Visit us to know more</a>
+          <p className="mb-8 text-sm md:text-base lg:text-lg">
+            Here we provide consultancy and guidance for your successful career
+          </p>
+          <a
+            href="./aboutus"
+            className="inline-block text-white no-underline border border-white px-6 md:px-8 py-3 text-sm md:text-base bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md"
+          >
+            Visit us to know more
+          </a>
         </div>
       </section>
 
@@ -79,7 +84,6 @@ const Home = () => {
         <p className="text-sm font-normal leading-6 py-2">
           Checkout the new courses and know more ...
         </p>
-
 
         <div className="row mt-5 flex flex-col justify-center md:flex-row md:justify-between md:space-x-4">
           <Card
@@ -152,8 +156,10 @@ const Home = () => {
         </div>
       </section>
 
-
-      <section id="courses" className="courses max-w-screen-xl mx-auto text-center py-24 px-4 md:px-12">
+      <section
+        id="courses"
+        className="courses max-w-screen-xl mx-auto text-center py-24 px-4 md:px-12"
+      >
         <h1 className="text-4xl font-bold mb-4">Our Courses</h1>
         <br />
 
@@ -162,24 +168,53 @@ const Home = () => {
         </p> */}
 
         <div className="row mt-8 flex flex-col md:flex-row justify-between">
-          <Course imageSrc="/courses/market management.png" courseTitle="Marketing Management" />
-          <Course imageSrc="/courses/hr.png" courseTitle="Human Resource Management" />
-          <Course imageSrc="/courses/finance.png" courseTitle="Finance Management" />
+          <Course
+            imageSrc="/courses/market management.png"
+            courseTitle="Marketing Management"
+          />
+          <Course
+            imageSrc="/courses/hr.png"
+            courseTitle="Human Resource Management"
+          />
+          <Course
+            imageSrc="/courses/finance.png"
+            courseTitle="Finance Management"
+          />
           <Course imageSrc="/courses/it.png" courseTitle="IT Management" />
         </div>
         <div className="row mt-8 flex flex-col md:flex-row justify-between">
-          <Course imageSrc="/courses/analytics.png" courseTitle="Marketing Management" />
-          <Course imageSrc="/courses/hr.png" courseTitle="Human Resource Management" />
-          <Course imageSrc="/courses/hospital.png" courseTitle="Finance Management" />
-          <Course imageSrc="/courses/inter business.png" courseTitle="IT Management" />
+          <Course
+            imageSrc="/courses/analytics.png"
+            courseTitle="Business Analytics"
+          />
+          <Course imageSrc="/courses/hr.png" courseTitle="Public Policy" />
+          <Course
+            imageSrc="/courses/hospital.png"
+            courseTitle="Healthcare Management"
+          />
+          <Course
+            imageSrc="/courses/inter business.png"
+            courseTitle="Digital marketing and sales"
+          />
         </div>
         <div className="row mt-8 flex flex-col md:flex-row justify-between">
-          <Course imageSrc="/courses/fintech.png" courseTitle="Marketing Management" />
-          <Course imageSrc="/courses/business.png" courseTitle="Human Resource Management" />
-          <Course imageSrc="/courses/logistic.png" courseTitle="Finance Management" />
-          <Course imageSrc="/courses/scm.png" courseTitle="IT Management" />
+          <Course
+            imageSrc="/courses/fintech.png"
+            courseTitle="Banking and financial services"
+          />
+          <Course
+            imageSrc="/courses/business.png"
+            courseTitle="Project Management"
+          />
+          <Course
+            imageSrc="/courses/logistic.png"
+            courseTitle="Artificial intelligence and machine learning"
+          />
+          <Course
+            imageSrc="/courses/scm.png"
+            courseTitle="Logistics and supply chain Management"
+          />
         </div>
-
       </section>
 
       <section className="facility max-w-screen-xl mx-auto text-center py-24 px-4 md:px-12">
@@ -212,7 +247,9 @@ const Home = () => {
       <br />
       <br />
       <section className="testimonials max-w-screen-xl mx-auto text-center ">
-        <h1 className="text-4xl font-bold mb-4 py-3">What does people say about us</h1>
+        <h1 className="text-4xl font-bold mb-4 py-3">
+          What does people say about us
+        </h1>
         {/* <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
           ipsum laudantium, illum dolores voluptas enim blanditiis assumenda odio
@@ -238,19 +275,30 @@ const Home = () => {
             />
           </div>
         </div>
-
       </section>
-      <section className="cta bg-cover bg-center py-8 text-center rounded-md" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/college.png)', width: '70%', margin: '50px auto' }}>
-        <h1 className="text-white text-4xl font-bold mb-8">Enroll course and know more</h1>
-        <a href="./contactus" className="inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md">Contact us</a>
+      <section
+        className="cta bg-cover bg-center py-8 text-center rounded-md"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/college.png)",
+          width: "70%",
+          margin: "50px auto",
+        }}
+      >
+        <h1 className="text-white text-4xl font-bold mb-8">
+          Enroll course and know more
+        </h1>
+        <a
+          href="./contactus"
+          className="inline-block text-white no-underline border border-white px-8 py-3 text-sm bg-transparent hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md"
+        >
+          Contact us
+        </a>
       </section>
 
       {/* Footer */}
-
-
-
     </div>
   );
-}
+};
 
 export default Home;
