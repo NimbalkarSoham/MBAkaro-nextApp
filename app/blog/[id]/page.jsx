@@ -38,7 +38,7 @@ const Blog = ({ params }) => {
               </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
       
 
