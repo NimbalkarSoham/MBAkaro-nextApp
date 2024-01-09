@@ -75,7 +75,7 @@ const Home = () => {
       </section>
 
       <section className="University max-w-screen-xl mx-auto text-center py-12 ">
-        <h1 className="text-3xl font-semibold">University</h1>
+        <h1 className="text-3xl font-semibold">Universities</h1>
         <p className="text-sm font-normal leading-6 py-2">
           Checkout the new courses and know more ...
         </p>
